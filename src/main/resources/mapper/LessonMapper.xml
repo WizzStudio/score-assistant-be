@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wz.score_assistant.mapper.LessonMapper">
+
+    <select id="queryAllLesson" resultType="com.wz.score_assistant.entity.Lesson">
+        select * from lessons
+    </select>
+    <select id="queryLessonByNameAmbiguously" resultType="com.wz.score_assistant.entity.Lesson">
+        select * from lessons where lesson_name like concat('%',#{lesson_name},'%')
+    </select>
+</mapper>

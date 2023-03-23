@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wz.score_assistant.mapper.PlanMapper">
+
+    <select id="queryPlanByGrade" resultType="com.wz.score_assistant.entity.Plan">
+        select plan_id,plan_code,grade,plan_data,plan_name
+            from lesson_plan where grade = #{grade}
+    </select>
+    <select id="queryGradePlanNameAmbiguously" resultType="com.wz.score_assistant.entity.Plan">
+        select plan_id,plan_code,grade,plan_name,plan_data from lesson_plan where grade=#{grade} and plan_name like concat('%',#{input},'%')
+    </select>
+    <select id="queryAll" resultType="com.wz.score_assistant.entity.Plan">
+        select * from lesson_plan
+    </select>
+</mapper>
