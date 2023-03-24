@@ -9,7 +9,7 @@ RUN apt-get update && \
     apt-get install -y mysql-server && \
     apt-get install -y python3 && \
     apt-get install -y openjdk-8-jdk
-ENV MYSQL_HOST=localhost MYSQL_PORT=3306 MYSQL_DATABASE=score_assistant MYSQL_USER=root MYSQL_PASSWORD=123456
+ENV MYSQL_HOST=localhost MYSQL_PORT=3306 MYSQL_DATABASE=score_assistant MYSQL_USER=root MYSQL_PASSWORD=
 # 创建user_data文件夹并设置权限
 RUN mkdir /opt/user_data && \
     chmod 777 /opt/user_data
