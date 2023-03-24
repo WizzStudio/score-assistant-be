@@ -1,3 +1,5 @@
+create database score_assistant;
+use score_assistant;
 create table if not exists lesson_plan
 (
     plan_id   int auto_increment
