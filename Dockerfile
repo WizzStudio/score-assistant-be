@@ -13,6 +13,7 @@ EXPOSE 8081
 COPY --from=MAVEN_BUILD /build/target/score_assistant-0.0.1-SNAPSHOT.jar /root/score-assistant-be.jar
 RUN apt-get update
 RUN apt-get install -y python3 python3-pip
+RUN pip install lxml libxduauth
 RUN mkdir /root/user_data
 COPY src/main/resources/get_grades.py /root/get_grades.py
 ENTRYPOINT ["java","-jar", "score-assistant-be.jar"]
