@@ -8,8 +8,8 @@ web:
   resources:
     static-locations: classpath:static/,classpath:/templates/
 
-get-score-cmd: "python3 /project/get_grades.py"
-user-data-path: "/project/user_data/"
+get-score-cmd: "python3 /root/get_grades.py"
+user-data-path: "/root/user_data/"
 springfox:
   documentation:
     enabled: true
