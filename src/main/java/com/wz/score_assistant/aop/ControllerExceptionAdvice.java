@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @RestControllerAdvice(basePackages = {"com.wz.score_assistant"})
 public class ControllerExceptionAdvice {
-
     @ExceptionHandler({BindException.class})
     public ResultVo MethodArgumentNotValidExceptionHandler(BindException e) {
         // 从异常对象中拿到ObjectError对象
